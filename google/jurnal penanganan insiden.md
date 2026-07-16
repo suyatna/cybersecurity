@@ -1,3 +1,5 @@
+# jurnal penanganan insiden
+
 ## a. kronologi insiden
 
 saya pelajari sebuah kasus insiden keamanan yang terjadi di klinik kesehatan kecil di suatu daerah, insiden tersebut terjadi pada hari selasa jam 09.00 pagi. beberapa komputer dan file rekam medis pasien tidak dapat diakses karyawan.
@@ -5,8 +7,6 @@ saya pelajari sebuah kasus insiden keamanan yang terjadi di klinik kesehatan kec
 operasional klinik langsung terganggu, dan tidak dapat gunakan sistem serta muncul catatan tebusan pada layar komputer. peretas minta tebusan sejumlah uang untuk memberikan kunci deskripsi.
 
 saya dokumentasikan kasus ini dengan gunakan incident handler's journal, dengan tujuan melatih kemampuan dokumentasi insident dan paham tentang alur serangan ransomeware secara real.
-
----
 
 ## b. jurnal 1
 
@@ -31,8 +31,6 @@ where: jaringan internal klinik kesehatan kecil.
 
 why: karyawan unduh lampiran email phising yang berisi malware ransomware, hingga peretas dapat masuk ke dalam akses sistem.
 
----
-
 ## c. proses analisis
 
 saya membaca skenario dengan detail, saya pisahkan informasi berdasarkan kronologi kejadian. saya mengidentifikasi awal titik masuk serangan yang disebabkan email phising.
@@ -50,8 +48,6 @@ saya mencatat bahwa serangan memiliki tahapan yang jelas:
 
 alur ini membantu saya memahami bagaimana satu kesalahan kecil dapat menyebabkan gangguan yang besar.
 
----
-
 ## d. alasan dokumentasi penting
 
 dokumentasi membantu saya untuk berpikir terstruktur. dengan insiden yang tidak mudah dipahami, insiden harus dicatat dengan bertahap.
@@ -59,8 +55,6 @@ dokumentasi membantu saya untuk berpikir terstruktur. dengan insiden yang tidak 
 catatan bisa menjadi referensi jika terjadi kasus serupa. dokumentasi juga penting dalam dunia kerja karena menjadi bukti investigasi.
 
 saya belajar bahwa incident response bukan hanya soal teknis, tetapi komunikasi dan pencatatan juga termasuk bagian yang penting
-
----
 
 ## e. kontrol keamanan
 
@@ -73,8 +67,6 @@ berdasarkan analisis, beberapa kontrol yang seharusnya diterapkan adalah:
 - multi-factor authentication (mfa) untuk sistem penting
 
 ransomeware sering berhasil masuk bukan karena sistem teknisnya yang lemah, namun banyak kasus terjadi disebabkan kurangnya kontrol dasar penting diterapkan.
-
----
 
 ## f. insight pribadi
 

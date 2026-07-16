@@ -1,10 +1,10 @@
+# manajemen izin linux
+
 ## a. deskripsi proyek
 
 membayangkan saya berperan sebagai professional keamanan yang bekerja bersama tim riset dalam organisasi besar. tugas utama saya adalah pastikan setiap file dan direktori hanya bisa diakses oleh pihak yang tepat.
 
 saya gunakan perintah linux seperti ls -la dan chmod untu periksa serta perbarui izin file, dan hasilnya adalah struktur izin lebih aman dan sesuai dengan kebijakan organisasi.
-
----
 
 ## b. penjelasan string izin 10 karakter
 
@@ -29,6 +29,7 @@ penjelasan:
 | 3-5    | [rwx]    | izin user atau owner. |
 | 6-8    | [rwx]    | izin group            |
 | 9-11   | [rwx]    | izin other            |
+
 penjelasan karakter:
 - r = read (baca)
 - w = write (tulis)
@@ -43,10 +44,7 @@ contoh -rw-rw-rw- berarti:
 
 masalahnya kebijakan organisasi tidak izinkan group dan other akses tulis.
 
----
-
 ## c. periksa detail
-
 
 langkah pertama saya lakukan adalah melihat struktur dan izin file pada direktori proyek. perintah yang saya gunakan:
 
@@ -94,8 +92,6 @@ drwx--x--- 2 researcher2 research_team 4096 Jan 19 19:13 drafts
 ```
 
 insight yang saya dapat, banyak administrator lupa periksa file tersembunyi. file tersembunyi tetap miliki risiko keamanan jika izinnya salah.
-
----
 
 ## d. kelola file tersembunyi
 
@@ -146,8 +142,6 @@ drwx--x--- 2 researcher2 research_team 4096 Jan 19 19:13 drafts
 
 penjelasan penting, file tersembunyi tetap harus taati aturan izin yang sama dan tersembunyi bukan berarti aman.
 
----
-
 ## e. ubah izin direktori
 
 direktori drafts hanya boleh diakses oleh researcher2. kondisi awal:
@@ -190,8 +184,6 @@ arti perubahan:
 
 pada izin direktori, execute berarti mampu untuk akses direktori tersebut. tanpa execute, isi direktori tidak bisa diakses walaupun ada read.
 
----
-
 ## f. proses berpikir
 
 saya mulai dari audit izin gunakan ls -la. saya identifikasi file yang miliki write access untuk group atau other, saya sesuaikan izin gunakan chmod.
@@ -210,8 +202,6 @@ tools yang digunakan:
 - perintah ls -la
 - perintah chmod
 - konsep permission string 10 karakter
-
----
 
 ## g. insight pribadi
 

@@ -1,3 +1,5 @@
+# analisis laporan insiden
+
 ## a. awal kejadian
 
 pada skenario ini, saya berperan sebagai seorang analis keamanan siber di perusahaan agensi multimedia. perusahaan ini melayani jasa desain website, desain grafis, hingga pemasaran media sosial untuk perusahaan atau bisnis kecil.
@@ -7,8 +9,6 @@ suatu hari jaringan internal tiba-tiba tidak bisa diakses, server tidak merespon
 firewall ternyata tidak dikonfigurasi dengan baik, sehingga penyerang dapat memanfaatkan celah untuk mengirimkan serangan ke dalam jaringan internal. dampak yang diakibatkan insiden ini cukup serius, operasional dapat terhenti, produktivitas menurun, dan  reputasi perusahaan juga berisiko.
 
 saya ditugaskan oleh atasan untuk membuat laporan insiden dan rencana untuk meningkatkan keamanan dengan menggunakan framework nist csf. 
-
----
 
 ## b. analisis laporan insiden
 
@@ -22,8 +22,6 @@ saya ditugaskan oleh atasan untuk membuat laporan insiden dan rencana untuk meni
 | deteksi      | gunakan software monitoring jaringan/siem, terapkan ids/ips untuk deteksi pola trafik abnormal, dan lakukan logging serta analisis trafik secara real time.          |
 | tanggapi     | blokir icmp yang masuk, nonaktifkan layanan yang tidak penting, lakukan analisis log firewall, dokumentasikan insiden, dan perbarui konfigurasi keamanan.            |
 | pulihkan     | cover/kembalikan layanan yang penting terlebih dahulu, evaluasi sistem yang terdampak, review konfigurasi firewall, dan buat prosedur standar pemulihan.             |
-
----
 
 ## c. identifikasi (identify)
 
@@ -43,8 +41,6 @@ dampak utama:
 
 saya menyimpulkan bahwa kontrol preventif belum cukup kuat dan monitoring juga belum optimal.
 
----
-
 ## d. lindungi (protect)
 
 langkah perbaikan yang dapat dilakukan:
@@ -62,8 +58,6 @@ saya tambahkan rencana perlindungan lanjutan, berupa:
 
 alasan penting langkah ini sangat sederhana. firewall adalah pintu gerbang utama, jika pintu tidak dijaga dengan baik maka siapapun dapat masuk.
 
----
-
 ## e. deteksi (detect)
 
 deteksi menjadi titik yang penting, serangan dos sering terjadi secara tiba-tiba. metode deteksi yang digunakan dan direkomendasikan oleh saya adalah:
@@ -73,8 +67,6 @@ deteksi menjadi titik yang penting, serangan dos sering terjadi secara tiba-tiba
 - aktifkan alert otomatis jika trafik melebihi threshold
 
 tujuan dilakukannya deteksi adalah mempercepat melakukannya tanggapan. semakin cepat diketahui, semakin kecil dampak yang terjadi.
-
----
 
 ## f. tanggapi (respond)
 
@@ -99,8 +91,6 @@ data yang dibutuhkan untuk analisis:
 
 tanggapan yang baik bukan hanya menghentikan serangan, namun harus menghasilkan perbaikan sistem.
 
----
-
 ## g. pulihkan (recover)
 
 pemulihan tidak berhenti saat jaringan kembali normal. berikut saya akan menyusun langkah perbaikan:
@@ -118,8 +108,6 @@ informasi yang dibutuhkan saat pemulihan adalah:
 - prosedur standar pemulihan
 
 saya melihat pentingnya memiliki prosedur tertulis karena tanpa prosedur tertulis, tim yang menangani dapat panik dan membuat kesalahan.
-
----
 
 ## h. insight pembelajaran
 

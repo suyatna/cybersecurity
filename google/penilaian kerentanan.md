@@ -1,3 +1,5 @@
+# penilaian kerentanan
+
 ## a. titik awal
 
 saya berperan sebagai seorang analis keamanan siber yang baru bekerja di perusahaan ecommerce. perusahaan tersebut menyimpan data pelanggan di server database remote. banyak karyawan bekerja dari berbagai negara, mereka rutin melakukan query untuk menelusuri dan mengelola data.
@@ -7,8 +9,6 @@ saya akhirnya menemukan satu hal yang cukup mengkhawatirkan di perusahaan terseb
 saya paham bahwa hal ini bukan risiko yang kecil. database adalah jantung bisnis perusahaan, jika terjadi kebocoran data atau gangguan layanan dapat mengakibatkan dampak yang besar. karena itu saya ditugaskan untuk membuat laporan penilaian kerentanan menggunakan panduan nist sp 800-30 rev. 1.
 
 laporan ini saya susun secara sistematis dengan tujuan bukan hanya menyelesaikan tugas, namun juga untuk  menunjukan kemampuan saya dalam melakukan risk assessment yang terstruktur dan mudah dipahami oleh manajemen lain.
-
----
 
 ## b. deskripsi sistem
 
@@ -27,8 +27,6 @@ permukaan serangan menjadi sangat luas karena:
 - tidak ada segmentasi jaringan
 - tidak ada lapisan proteksi tambahan
 
----
-
 ## c. tujuan penelitian
 
 database memiliki nilai tinggi bagi bisnis, data pelanggan dapat digunakan untuk strategi pemasaran serta melakukan analisis perilaku konsumen. kehilangan data berarti artinya kehilangan aset bisnis.
@@ -36,8 +34,6 @@ database memiliki nilai tinggi bagi bisnis, data pelanggan dapat digunakan untuk
 mengamankan data merupakan tindakan yang sangat penting untuk menjaga kepercayaan pelanggan, kebocoran informasi dapat merusak reputasi perusahaan dan menimbulkan konsekuensi hukum.
 
 server harus selalu tersedia. jika tidak, seluruh karyawan tidak dapat mengakses data dalam database. operasi bisnis akan terdampak langsung dan terganggu, yang akhirnya menimbulkan potensi pendapatan yang menurun.
-
----
 
 ## d. penilaian risiko
 
@@ -49,8 +45,6 @@ saya akan menggunakan pendekatan kualitatif yang sesuai dengan nist sp 800-30 re
 | pesaing bisnis | pengambilan informasi pelanggan dan internal karena menyangkut masalah rahasia bisnis     | 2       | 3      | 6            |
 | orang dalam    | manipulasi dan penyalahgunaan data penting oleh orang dalam yang memiliki niat tidak baik | 2       | 2      | 4            |
 
----
-
 ## e. pendekatan penilaian
 
 dengan database perusahaan yang terbuka ke publik saya pilih tiga ancaman tersebut, karena fokus saya hanya pada ancaman yang memiliki kombinasi potensi yang tinggi dan dampak yang besar.
@@ -60,8 +54,6 @@ penilaian potensi saya ukur berdasarkan exposure sistem hingga ke publik, karena
 penilaian dampak saya ukur melalui sisi operasional bisnis, reputasi, dan kerugian finansial. jika terjadinya kebocoran data, perusahaan tidak hanya kehilangan data, namun juga kepercayaan pelanggan.
 
 pendekatan ini bersifat kualitatif, penilaian yang saya lakukan berdasarkan kondisi.
-
----
 
 ## f. strategi remediasi
 
@@ -75,8 +67,6 @@ terapkan defense in depth melalui firewall, lakukan segmentasi jaringan, gunakan
 
 strategi ini menurunkan kemungkinan serangan dan mengurangi dampak jika insiden terjadi.
 
----
-
 ## g. dampak remediasi
 
 jika kontrol keamanan ini diterapkan:
@@ -86,8 +76,6 @@ jika kontrol keamanan ini diterapkan:
 - stabilkan operasional bisnis
 
 begitupun produktivitas karyawan akan meningkat.
-
----
 
 ## h. insight pribadi
 

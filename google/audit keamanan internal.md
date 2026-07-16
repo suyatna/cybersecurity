@@ -1,3 +1,5 @@
+# audit keamanan internal
+
 ## a. kenapa audit ini dilakukan?
 
 pada skenario ini, saya berperan sebagai seorang analis keamanan siber di perusahaan botium toys. perusahaan ini awalnya hanya toko mainan kecil di suatu daerah. satu gedung digunakan untuk kantor, toko, dan gudang.
@@ -7,8 +9,6 @@ penjualan online semakin meningkat, pelanggan bukan hanya dari amerika namun dar
 manager it merasa perlu melakukan audit internal, dengan tujuan untuk mengetahui kondisi keamanan saat ini. manager melihat celah dan ingin mengatasinya untuk menghindari kebocoran data, risiko denda, dan menjaga keberlangsungan bisnis.
 
 karena aset yang belum terkelola dengan baik, audit ini dilakukan menggunakan framework nist csf dengan fokus identify. berdasarkan hasil analisis, saya memberikan risk score 8 dari 10 yang artinya masih memiliki potensi risiko yang serius.
-
----
 
 ## b. tools dan pendekatan yang digunakan
 
@@ -25,8 +25,6 @@ pendekatan audit dilakukan secara:
 - evaluasi kontrol
 - mapping kepatuhan
 - analisis gap
-
----
 
 ## c. aset yang akan diaudit
 
@@ -49,8 +47,6 @@ data kartu kredit juga belum dienkripsi, belum ada ids, belum ada backup data, b
 
 hanya firewall, antivirus, serta kontrol fisik seperti cctv dan kunci keamanan yang tersedia. 
 
----
-
 ## d. hasil audit kontrol keamanan
 
 ### controls assessment checklist
@@ -67,6 +63,7 @@ hanya firewall, antivirus, serta kontrol fisik seperti cctv dan kunci keamanan y
 | x   |       | antivirus                        |
 | x   |       | enkripsi data                    |
 | x   |       | sistem manajemen kata sandi      |
+
 **insight:** 
 kontrol teknis sudah ada, walaupun masih dasar. kontrol fisik juga terhitung cukup baik. masalah besarnya ada di kontrol administratif, contohnya tidak menerapkan least privilege, tidak ada separation of duties, dan tidak tersedianya disaster recovery.
 
@@ -75,8 +72,6 @@ letak risiko terbesar ada pada:
 - penyalahgunaan akses internal
 - kehilangan data permanen
 - denda dari regulator
-
----
 
 ## e. hasil audit kepatuhan
 
@@ -88,6 +83,7 @@ letak risiko terbesar ada pada:
 |     | x     | data kartu kredit diproses dan disimpan dalam environment yang aman |
 |     | x     | terapkan prosedur enkripsi                                          |
 |     | x     | terapkan kebijakan manajemen kata sandi yang aman                   |
+
 ### perlindungan data uni eropa (gdpr)
 
 | ya  | tidak | praktik terbaik                                         |
@@ -96,6 +92,7 @@ letak risiko terbesar ada pada:
 | x   |       | terdapat alarm notifikasi 72 jam jika terjadi kebocoran |
 |     | x     | data harus dikelompokan dan dikelola dengan benar       |
 | x   |       | terapkan kebijakan dan prosedur privasi yang kuat       |
+
 ### soc 1 & soc 2
 
 | ya  | tidak | praktik terbaik                                |
@@ -105,8 +102,6 @@ letak risiko terbesar ada pada:
 | x   |       | jaga kualitas data akurat dan tervalidasi      |
 | x   |       | data hanya tersedia untuk pihak yang berwenang |
 
----
-
 ## f. hasil analisis dan alasan
 
 berdasarkan analisis, akar masalah yang terjadi ada di manajemen akses dan perlindungan data sensitif. semua karyawan bisa mengakses data internal dan itu melanggar prinsip least privilege, karena dapat mengakibatkan meningkatnya risiko insider threat.
@@ -114,8 +109,6 @@ berdasarkan analisis, akar masalah yang terjadi ada di manajemen akses dan perli
 tidak menerapkan enkripsi data, sehingga data kartu kredit dapat terbaca jika terjadi breach. lalu tidak ada backup data dan disaster recovery plan, jika terjadi kena ransomware atau server rusak, operasional bisnis dapat berhenti total.
 
 tidak ada intrusion detection system (ids) dapat mengakibatkan serangan siber tidak terdeteksi. kebijakan password juga masih lemah walaupun ada, sehingga tidak sesuai standar pci dss. begitu juga tidak adanya password manager yang akan mengakibatkan persamaan pasword di banyak sistem.
-
----
 
 ## g. rekomendasi berdasarkan tingkat risiko
 
@@ -135,8 +128,6 @@ berikut adalah rekomendasi saya yang dapat dilakukan untuk meningkatkan keamanan
 * kelompokan data berdasarkan sensitivitas
 * buat jadwal monitoring sistem yang jelas
 * review ulang akses seluruh karyawan
-
-****
 
 ## h. insight pembelajaran
 

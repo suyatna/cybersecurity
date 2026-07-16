@@ -1,10 +1,10 @@
+# jurnal final penanganan insiden
+
 ## a. sebelumnya...
 
 sebelumnya saya sudah menyelasaikan jurnal penanganan insiden versi awal, sekarang saya akan gunakan setiap bagian untuk mencatat proses, analisis insiden, dan penggunaan tools keamanan.
 
 tidak hanya mencatat apa yang terjadi, namun saya juga coba pahami alurnya. saya akan tulis semua fase dalam siklus kehidupan nist incident response.
-
----
 
 ## b. jurnal 1
 
@@ -29,8 +29,6 @@ where: jaringan internal klinik kesehatan kecil.
 
 why: karyawan unduh lampiran email phising yang berisi malware ransomware, hingga peretas dapat masuk ke dalam akses sistem.
 
----
-
 ## c. jurnal 2
 
 | kolom            | keterangan                                                                                                                                                                                                     |
@@ -45,8 +43,6 @@ why: karyawan unduh lampiran email phising yang berisi malware ransomware, hingg
 ### penjelasan tools
 
 saya salin nilai hash file mencurigakan lalu upload ke virustotal, hasil menunjukan bahwa file terindikasi malware oleh beberapa engine antivirus. saya paham bahwa analisis hash adalah langkah awal untuk validasi ancaman tanpa menjalankan file secara langsung.
-
----
 
 ## d. jurnal 3
 
@@ -63,8 +59,6 @@ saya salin nilai hash file mencurigakan lalu upload ke virustotal, hasil menunju
 
 saya lakukan capture packet jaringan dengan tools wireshark, saya memfilter trafik http dan dns. saya melihat adanya koneksi mencurigakan, aktivitas ini menunjukkan kemungkinan terjadinya komunikasi command and control.
 
----
-
 ## e. jurnal 4
 
 | kolom            | keterangan                                                                                                                                                                          |
@@ -75,6 +69,7 @@ saya lakukan capture packet jaringan dengan tools wireshark, saya memfilter traf
 | tools            | splunk untuk lakukan query log dan pencarian aktivitas mencurigakan.                                                                                                                |
 | 5w               | dijelaskan pada bagian penjelasan 5w dibawah table ini.                                                                                                                             |
 | catatan tambahan | log membantu melihat pola login mencurigakan. tanpa log monitoring, aktivitas mencurigakan dapat tidak terdeteksi.                                                                  |
+
 ### penjelasan 5w
 
 who: pengguna internal yang akunnya disusupi penyerang.
@@ -90,8 +85,6 @@ why: kemungkinan kredensial bocor akibat phising atau password lemah.
 ### penjelasan tools
 
 saya gunakan query sederhana melalui splunk untuk mencari login gagal dan login dari ip mencurigakan, hasil tunjukkan anomali pada akun tertentu. saya paham pentingnya tools siem dalam mendeteksi ancaman secara real-time.
-
----
 
 ## f. catatan dan insight pribadi
 
