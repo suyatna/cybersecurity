@@ -13,7 +13,7 @@ karena aset yang belum terkelola dengan baik, audit ini dilakukan menggunakan fr
 ## b. tools dan pendekatan yang digunakan
 
 tools audit ini menggunakan:
-- framework NIST CSF
+- framework nist csf
 - referensi pci dss
 - referensi gdpr
 - referensi  soc 1 & soc 2
