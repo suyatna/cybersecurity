@@ -52,7 +52,7 @@ role tersebut disimpan pada tabel roles dan dihubungkan dengan karyawan lewat ta
 
 konsep ini diterapkan least privilege, sehingga user tidak dapat akses yang lebih luas dari pada keperluannya.
 
-## e. validasi kontrol akses
+## e. validasi kontrol akses (access control)
 
 setelah rbac diterapkan, saya lakukan pengujian terhadap masing-masing role. skenario pengujian:
 
@@ -64,7 +64,7 @@ setelah rbac diterapkan, saya lakukan pengujian terhadap masing-masing role. ske
 
 uji dilakukan untuk pastikan akses yang diberi benar-benar berjalan sesuai role. saya lihat bahwa rbac tidak hanya digunakan untuk bagi user jadi beberapa kelompok. konfigurasi privilege juga harus diuji supaya tidak over permission.
 
-## f. arsitektur dan tata kelola
+## f. arsitektur dan tata kelola (governance)
 
 saya buat rancangan erd untuk tunjukkan hubungan antara pasien, karyawan, dan role. relasi antara employee dan roles gunakan tabel employee_roles. pendekatan ini membuat satu employee dapat miliki role yang terhubung lewat tabel relasi tanpa simpan data dengan role berulang kali.
 
@@ -79,7 +79,7 @@ struktur database juga dibuat dengan prinsip normalisasi untuk kurangi redundanc
 
 pendapat saya, database yang aman tidak cukup hanya miliki konfigurasi teknis. aturan mengenai siapa yang bertanggung jawab data juga harus jelas.
 
-## g. manajemen risiko
+## g. manajemen risiko (risk management)
 
 saya identifikasi beberapa risiko yang dapat terjadi pada sistem securehealth.
 
@@ -95,7 +95,7 @@ saya identifikasi beberapa risiko yang dapat terjadi pada sistem securehealth.
 
 risiko terbesar skenario ini adalah kebocoran data pasien karena informasi medis dan asuransi adalah termasuk data yang sangat sensitif. kontrol keamanan perlu diterapkan berlapis, satu lapis mekanisme saja tidak cukup jika terjadi kegagalan pada mekanisme lainnya.
 
-## h. kepatuhan dan audit
+## h. kepatuhan (compliance) dan audit
 
 saya juga terapkan konspe kepatuhan dengan mengacu pada gdpr dan hipaa. beberapa kontrol yang diperhatikan, yaitu:
 - batasi akses data pasien

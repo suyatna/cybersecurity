@@ -19,7 +19,7 @@ pada skenario ini, saya berperan menjadi seorang user dengan role sales_rep yang
 
 kontrol keamanan menerapkan konsep least privilege, yaitu user hanya diberi akses yang diperlukan untuk jalankan tugasnya.
 
-## c. manajemen pengguna
+## c. manajemen pengguna (user management)
 
 pertama, saya lakukan yaitu create database customerorders lewat phpmyadmin dan lakukan import database yang sudah disediakan. database berisi beberapa tabel, seperti:
 - customers
@@ -38,7 +38,7 @@ setelah database dibuat saya lanjut untuk create user dengan role sales_rep. use
 
 pemberian akses dilakukan lewat phpmyadmin di bagian user accounts, saya tidak beri seluruh akses database karena user sales tidak perlu akses penuh seperti administrator.
 
-## d. kontrol akses
+## d. kontrol akses (access control)
 
 setelah user dibuat saya lakukan pembatasan akses pada database, user sales_rep tidak harusnya dapat akses seluruh informasi perusahaan. beberapa akses tabel, saya lakukan pengaturan lewat menu edit privileges pada phpmmyadmin.
 
@@ -53,7 +53,7 @@ batasan ini penting karena database dapat simpan informasi yang tidak berhubunga
 salah satu bagian menarik adalah pembatasan akses hingga level kolom. di tabel customers, user sales_rep tetap diberi akses terhadap tabel, tapi tidak semua kolom diubah. kolom creditlimit jadi pengecualian karena user masih perlu lakukan update terhadap kolom creditlimit, sedangkan kolom lainnya tidak diberikan akses update.
 
 kolom lainnya tidak diberi permission update, konsep dibuat aksesnya lebih spesifik. user tidak dibatasi berdasarkan tabel, tapi juga berdasarkan data yang boleh diedit. saya juga lakukan praktik yang sama di tabel products, dengan batasi user supaya tidak dapat lakukan update di kolom buyprice. hal tersebut ditunjukkan bahwa access control diterapkan lebih detail.
-## f. lakukan enkripsi
+## f. lakukan enkripsi (encryption)
 
 selanjutnya, saya amankan data sensitif dengan enkripsi. saya gunakan aes untuk enkripsi data database. sebelum lakukan enkripsi, passphrase tidak langsung gunakan sebagai key, saya lakukan hashing gunakan sha-2 dengan panjang 512 bit.
 
@@ -90,7 +90,7 @@ SET addressLine1 = AES_ENCRYPT(addressLine1, @key_str);
 
 setelah proses tersebut selesai, data pada addressline1 tidak lagi simpan dalam bentuk plaintext.
 
-## g. lakukan dekripsi
+## g. lakukan dekripsi (decryption)
 
 enkripsi dibuat untuk data tidak dapat dibaca langsung, data tetap harus dapat dikembalikan ketika user yang miliki hak akses memang diperlukan. saya gunakan perintah berikut untuk baca kembali data:
 
@@ -116,5 +116,3 @@ lab dibuat untuk saya pahami tiga bagian penting dalam database security:
 | manajemen pengguna | atur akun yang dapat akses database                               |
 | kontrol akses      | batasi database, tabel, serta kolom yang dapat digunakan pengguna |
 | enkripsi           | lindungi data sensitif supaya tidak tersimpan dalam plaintext     |
-
-pendapat saya, bagian paling penting adalah tidak semua pengguna harus miliki akses penuh. keamanan database dimulai dengan diberi akses secukupnya, batasi data yang dapat diedit, dan menambahi enkripsi di data yang sensitif.
