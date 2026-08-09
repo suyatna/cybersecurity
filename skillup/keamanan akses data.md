@@ -21,7 +21,7 @@ kontrol keamanan menerapkan konsep least privilege, yaitu user hanya diberi akse
 
 ## c. manajemen pengguna
 
-pertama, saya lakukan yaitu buat database customerorders lewat phpmyadmin dan lakukan import database yang sudah disediakan. database berisi beberapa tabel, seperti:
+pertama, saya lakukan yaitu create database customerorders lewat phpmyadmin dan lakukan import database yang sudah disediakan. database berisi beberapa tabel, seperti:
 - customers
 - employees
 - offices
